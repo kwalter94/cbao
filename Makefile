@@ -1,17 +1,17 @@
 CC=gcc
 CFLAGS=-Wall -g3
 LDFLAGS=
-OBJ=BaoTree.o BaoError.o
-TESTS=BaoTreeTest
+OBJ=tree.o error.o
+TESTS=treeTest
 
-BaoTree.o: BaoTree.h BaoTree.c
-	$(CC) $(CFLAGS) -c BaoTree.c
+bao: $(OBJ) main.c
+	$(CC) $(CFLAGS) -o main $^
 
-BaoError.o: BaoError.h BaoError.c
-	$(CC) $(CFLAGS) -c BaoError.c
+tree.o: tree.h tree.c
+	$(CC) $(CFLAGS) -c tree.c
 
-BaoTreeTest: $(OBJ) BaoTreeTest.c
-	$(CC) $(CFLAGS) -o BaoTreeTest $^
+error.o: error.h error.c
+	$(CC) $(CFLAGS) -c error.c
 
 tests: $(TESTS)
 
