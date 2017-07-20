@@ -1,11 +1,13 @@
 #include "eval.h"
 #include "error.h"
 #include "tree.h"
+
 #include <stdlib.h>
 
 
 static int get_best_score(Player, BaoTree*, const BaoRules*, int);
 
+// TODO: Use minimax/negamax with alpha - beta  pruning
 int best_branch(BaoTree *node, const BaoRules *rules, int depth)
 {
 	int i, best_path, max_score, score;

@@ -218,9 +218,6 @@ int grow_tree(BaoTree *node, const BaoRules *rules);
 int find_branch(BaoTree *node, const Move *move);
 
 
-int best_branch(BaoTree *node, const BaoRules *rules, int depth);
-
-
 int shift_tree(BaoTree **node_p, unsigned int path);
 
 

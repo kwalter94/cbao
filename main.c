@@ -1,4 +1,5 @@
 #include "tree.h"
+#include "eval.h"
 
 #include <stdio.h>
 #include <stdlib.h>
